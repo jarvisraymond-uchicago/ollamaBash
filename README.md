@@ -49,3 +49,7 @@ results in files with the format `_llamaBash-<mode>-<filename>.txt` in the user'
 
 To use this script effectively, ensure you have Ollama installed first:
 https://ollama.ai/
+
+## Future Improvements
+
+This currently works at the directory level, however by changing the find function to not use a max depth, this code be used to generate tests, reviews, documentation and storybooks for an entire code base. However the script currently outputs all the files in the user's current directory instead of alongside each file in the project. Additionally because olama is limited in its prompt size, it would be unable to generate documentation for an entire code base with a single huge prompt.
