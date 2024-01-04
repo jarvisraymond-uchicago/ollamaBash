@@ -1,8 +1,0 @@
- The given code is a React component named `TableRow` that renders a single row of data in a table. It takes a prop called `rowObject` which contains various properties and values, and it uses this data to render the corresponding table cells for each property. The components also have logic to conditionally apply some classes based on whether or not the cell content contains a search term passed down as a prop from the parent component.
-
-Additionally, there is a `checkIfCellContainsSearchTerm` helper function that checks if the given string contains the search term and a `checkIfHiddenCellsContainSearchTerm` helper function that checks if any of the hidden cells contain the search term. These functions are used to conditionally apply classes based on whether or not the search term is present in these cells.
-
-The table row also has expandable functionality where it renders an extra `tr` with details when the row is expanded, and this extra data is shown using a Grid layout from Semantic UI React library.
-
-Finally, there's a simple `App` component that returns a greeting message as a JSX element, which is not related to the given `TableRow` component.
-

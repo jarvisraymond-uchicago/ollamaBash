@@ -1,14 +1,37 @@
 import React, { useState } from 'react';
 import { Button, Grid, Table } from '@mantine/core';
-import { IRowData } from './Interfaces/Interfaces';
 
 interface ITableRowProps {
   rowObject: IRowData;
   columnsShown: number;
   searchInputValue: string;
 }
-
-const TableRow = ({
+interface IValueSummary {
+  name?: string;
+  personCount?: number;
+  start?: number;
+  end?: number;
+}
+interface IRowData {
+  vocabularyID: string;
+  conceptID: number;
+  conceptCode: string;
+  conceptName: string;
+  conceptClassID: string;
+  numberOfPeopleWithVariable: number;
+  numberOfPeopleWithVariablePercent: number;
+  numberOfPeopleWhereValueIsFilled: number;
+  numberOfPeopleWhereValueIsFilledPercent: number;
+  numberOfPeopleWhereValueIsNull: number;
+  numberOfPeopleWhereValueIsNullPercent: number;
+  valueStoredAs: string;
+  minValue: number | null;
+  maxValue: number | null;
+  meanValue: number | null;
+  standardDeviation: number;
+  valueSummary: IValueSummary[];
+}
+const ExampleComponent2 = ({
   rowObject,
   columnsShown,
   searchInputValue,
@@ -279,4 +302,4 @@ const TableRow = ({
   );
 };
 
-export default TableRow;
+export default ExampleComponent2;
