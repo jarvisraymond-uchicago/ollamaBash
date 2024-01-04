@@ -4,6 +4,7 @@
 # bash llamaBash.sh --review 
 # bash llamaBash.sh --storybook
 # bash llamaBash.sh --test  
+# bash llamaBash.sh --documentation
 
 
 PROMPT=""
@@ -13,6 +14,7 @@ directory_path=$(pwd)
 
 # Create an array of files with .jsx, .js, .ts, or .tsx extensions
 files_array=($(find "$directory_path" -maxdepth 1 -type f \( -name "*.jsx" -o -name "*.js" -o -name "*.ts" -o -name "*.tsx" \)))
+
 
 # Check if there are matching files
 if [ ${#files_array[@]} -eq 0 ]; then
@@ -32,8 +34,6 @@ if [ "$1" = "--documentation" ]; then
     ollama run mistral "${PROMPT} ${FILESCONTENT}" > "_llamaBashOutput-documentation.txt"
     exit 1
 fi
-
-
 
 for file in "${files_array[@]}"; do
     MODE=''
@@ -56,8 +56,8 @@ for file in "${files_array[@]}"; do
         INPUT=$(cat $file)
         # echo $INPUT
         filename="${file##*/}"
-        ollama run dolphin-mixtral "${PROMPT} ${INPUT}" > "_llamaBash-${MODE}-${filename}.txt"
-        # Other LLMs you could use: llama2, codellama, dolphin-mixtral
-        # Removing models (they are big!): ollama rm dolphin-mixtral
+        ollama run mistral "${PROMPT} ${INPUT}" > "_llamaBash-${MODE}-${filename}.txt"
+        # Other LLMs you could use: llama2, codellama
+        # Removing models (they are big!): ollama rm mistral
 done
 exit 1

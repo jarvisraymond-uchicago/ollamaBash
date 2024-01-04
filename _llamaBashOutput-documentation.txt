@@ -1,0 +1,12 @@
+ It looks like you have defined several interfaces: `IValueSummary`, `IRowData`, `ITableData`, and `ISortConfig`. These interfaces define the shape of various types of data used within your application.
+
+`IValueSummary` seems to represent an object with optional properties for a name, person count, start, and end.
+
+`IRowData` appears to be an object defining the structure of a single row in a table, including properties for a vocabulary ID, concept ID, concept code, concept name, concept class ID, various person count percentages and numbers, value stored as, minimum and maximum values, mean value, standard deviation, and an array of `IValueSummary` objects.
+
+`ITableData` is likely the overall shape of your table data, consisting of a total number and an array of `IRowData` objects.
+
+`ISortConfig` defines an object with optional properties for a sort key (a string or null) and direction (ascending, descending, or off).
+
+It's common to define interfaces in TypeScript projects, especially larger ones, as they help ensure consistent data structures throughout your codebase.
+
