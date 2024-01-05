@@ -15,7 +15,7 @@ To use this script in your terminal, place the script in a directory containing 
 - `bash ollamaBash.sh --test`
 - `bash ollamaBash.sh --documentation`
 
-This will then analyze and output file(s) in the current directory. You can clone this project and run these commands to have it analyze two example components. 
+This will then analyze and output file(s) in the current directory. You can clone this project and run these commands to have it analyze example components. 
 
 To have the script operate on all sub directories, add the secondary parameter `--recursive`
 
@@ -63,6 +63,6 @@ https://ollama.ai/
 
 ## Future Improvements
 
-The script currently outputs all the files alongside each file in the project. Because Ollama is limited in its prompt size, it is currently unable to generate documentation for an entire code base with a single huge prompt.
+The script currently outputs all the files alongside files in the project. Because Ollama is limited in its prompt size, it is currently unable to generate documentation for an entire code base with a single huge prompt.
 
 Limitations by file type: This currently works on JS and TS type files, however the script can easily be updated to generate tests, reviews, documentation etc. for other computing languages by changing the file type extensions and prompts.
