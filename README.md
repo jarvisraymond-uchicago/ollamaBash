@@ -2,7 +2,7 @@
 
 Uses Ollama library https://ollama.ai/ to prompt a LLM and then generate test files, storybook files, code review files or a documentation file for each JS, JSX, TS or TSX in a directory.
 
-This bash script, named `ollamaBash.sh`, is designed to automatically generate various
+This bash script, named `ollamaBash`, is designed to automatically generate various
 artefacts such as unit tests, Storybook files, and documentation for React projects
 using the olama tool. Olama is a user-friendly tool designed to run large language models (LLMs) locally on a computer. It supports a variety of AI models including LLaMA-2, CodeLLaMA, Mistral, and others.
 
@@ -10,21 +10,21 @@ using the olama tool. Olama is a user-friendly tool designed to run large langua
 
 To use this script in your terminal, place the script in a directory containing the relevant files types and run one of the following commands after installing Ollama:
 
-- `bash ollamaBash.sh --review`
-- `bash ollamaBash.sh --storybook`
-- `bash ollamaBash.sh --test`
-- `bash ollamaBash.sh --documentation`
+- `bash ollamaBash --review`
+- `bash ollamaBash --storybook`
+- `bash ollamaBash --test`
+- `bash ollamaBash --documentation`
 
 This will then analyze and output file(s) in the current directory. You can clone this project and run these commands to have it analyze example components. 
 
 To have the script operate on all sub directories, add the secondary parameter `--recursive`
 
-- `bash ollamaBash.sh --review --recursive`
-- `bash ollamaBash.sh --storybook --recursive`
-- `bash ollamaBash.sh --test --recursive`
-- `bash ollamaBash.sh --documentation --recursive`
+- `bash ollamaBash --review --recursive`
+- `bash ollamaBash --storybook --recursive`
+- `bash ollamaBash --test --recursive`
+- `bash ollamaBash --documentation --recursive`
 
-To make the script global, put it in usr/local/bin and make sure it is executable(chmod +x ollamaBash.sh)
+To make the script global, put it in usr/local/bin and make sure it is executable, for example:  run `chmod 755 ollamaBash` and can be called from any directory with `ollama --test --recursive` 
 
 ## Features
 
