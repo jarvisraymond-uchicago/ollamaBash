@@ -1,0 +1,28 @@
+ Here's an example Jest unit test using TypeScript for the given Function Component:
+
+```typescript
+import React from 'react';
+import { render } from '@testing-library/react';
+import App from './App'; // Assuming your component file is named "App.tsx"
+
+describe('App', () => {
+  it('should render the greeting "Hello Function Component!"', () => {
+    const { getByText } = render(<App />);
+    const element = getByText(/Hello Function Component!/i);
+    expect(element).toBeInTheDocument();
+  });
+});
+```
+
+Make sure you have installed the necessary dependencies (Jest, React Testing Library) before running your tests. For instance, you can initialize a new project with `create-react-app my-project --template typescript`, and then install the testing library by adding the following line to your `package.json`:
+
+```json
+"devDependencies": {
+  "@testing-library/jest-dom": "^5.14.2",
+  "@testing-library/react": "^13.0.6",
+  "jest": "^27.4.5"
+}
+```
+
+Now you can run the tests using `npm test`.
+
