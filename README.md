@@ -24,6 +24,8 @@ To have the script operate on all sub directories, add the secondary parameter `
 - `bash ollamaBash.sh --test --recursive`
 - `bash ollamaBash.sh --documentation --recursive`
 
+To make the script global, put it in usr/local/bin and make sure it is executable(chmod +x ollamaBash.sh)
+
 ## Features
 
 The script supports the following features:
