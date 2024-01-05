@@ -6,9 +6,7 @@
 # bash ollamaBash.sh --test  
 # bash ollamaBash.sh --documentation
 
-
 function runScript() {
-    echo $1
      if [ -z "$1" ] || [[ "$1" != "--documentation" &&  "$1" != "--review" &&  "$1" != "--storybook" && "$1" != "--test" ]]; then
         echo "Missing or incorrect mode argument, try --test, --documentation or --review"
         echo $1
@@ -28,7 +26,7 @@ function runScript() {
     fi
 
     if [ "$1" = "--documentation" ]; then
-        PROMPT="Review the following files in this React project. Create high level software documentation explaining how the application works for the end user. Do not output any code or recommendations."
+        PROMPT="Summarize the following files in this React project. Create high level software documentation explaining how the application works for the end user. Do not output any code or recommendations."
         FILESCONTENT=""
         for file in "${files_array[@]}"; do
             INPUT=$(cat $file)

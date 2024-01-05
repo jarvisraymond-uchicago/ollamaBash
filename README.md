@@ -15,7 +15,7 @@ To use this script in your terminal, place the script in a directory containing 
 - `bash ollamaBash.sh --test`
 - `bash ollamaBash.sh --documentation`
 
-This will then analyze and output file(s) in the current directory. You can clone this project and run these commands to have it analyze two example components.
+This will then analyze and output file(s) in the current directory. You can clone this project and run these commands to have it analyze two example components. 
 
 To have the script operate on all sub directories, add the secondary parameter `--recursive`
 
@@ -38,7 +38,7 @@ The script supports the following features:
 3. **Test**: In this mode, the script attempts to create Jest unit tests for each component in
    the project.
 4. **Documentation**: In this mode, the script attempts to generate high-level software
-   documentation.
+   documentation for all files in the folder within a single file.
 
 ## Implementation
 
