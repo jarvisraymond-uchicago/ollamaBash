@@ -54,7 +54,7 @@ A user-provided argument is required; the script checks which mode to run in
 (review, test, storybook, or documentation) based on the argument. The script then applies the corresponding prompt for each file and generates the required output using Ollama, storing the
 results in files with the format `_llamaBash-<mode>-<filename>.txt` in the directory of the file.
 
-If the user provides the secondary argument `--recursive`, the script will recursive iterate through all subdirectories using the first argument provided and generate files in each directory containing the relevant file types.
+If the user provides the secondary argument `--recursive`, the script will iterate through all subdirectories using the first argument provided and generate files in each directory containing the relevant file types.
 
 ## Prerequisites
 
