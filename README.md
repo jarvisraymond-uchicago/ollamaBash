@@ -1,6 +1,6 @@
 # OllamaBash Readme
 
-Uses Ollama library https://ollama.ai/ to prompt a LLM and then generate test files, storybook files, code review files or a documentation file for each JS, JSX, TS or TSX in a directory.
+This bash script uses Ollama library https://ollama.ai/ to prompt a LLM and then generate test files, storybook files, code review files or a documentation file for each JS, JSX, TS or TSX in a directory.
 
 This bash script, named `ollamaBash`, is designed to automatically generate various
 artefacts such as unit tests, Storybook files, and documentation for React projects
