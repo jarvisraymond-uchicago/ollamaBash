@@ -42,7 +42,7 @@ The script supports the following features:
 
 ## Implementation
 
-The script starts by setting an empty `PROMPT` variable and determining the current
+The script determines the current
 working directory using the `pwd` command. It then searches for all files with
 extensions `.jsx`, `.js`, `.ts`, or `.tsx` within that directory using the `find`
 command and stores them in an array called `files_array`.
